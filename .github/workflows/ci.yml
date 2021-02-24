@@ -32,8 +32,8 @@ jobs:
     - name: github workspace
       run: echo ${{ github.workspace }}
     
-    - name: display settings
-      run: cat ${{ github.workspace}}/settings.xml
+    # - name: display settings
+    #   run: cat ${{ github.workspace}}/settings.xml
 
     - name: Static Analysis
       uses: actions/checkout@v2
