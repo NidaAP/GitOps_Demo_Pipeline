@@ -43,10 +43,9 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 		<maven.compiler.source>7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<sonar.projectKey>NidaAP_GitOpsPipeline</sonar.projectKey>
-		<sonar.organization>nidaap</sonar.organization>
-		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-
+  <sonar.projectKey>NidaAP_GitOps_Demo_Pipeline</sonar.projectKey>
+  <sonar.organization>nidaap</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 
 <build>
