@@ -85,12 +85,19 @@ jobs:
     - name: War packaging
       run: mvn -X war:war
   
+    - name: Cache Maven packages
+      uses: actions/cache@v1
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+        restore-keys: ${{ runner.os }}-m2
+
     - name: Checkout Code
       uses: s4u/maven-settings-action@v2.3.0
       with:
         servers: '[{ "id": "artifactory", "username": "${{ secrets.ARTIFACTORY_USERNAME }}", "password": "${{ secrets.ARTIFACTORY_PASSWORD }}" }]'
     
     - name: publish
-      run: mvn --batch-mode deploy
+      run: mvn deploy
 
     
