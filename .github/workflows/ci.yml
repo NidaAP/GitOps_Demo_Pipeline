@@ -98,6 +98,6 @@ jobs:
         servers: '[{ "id": "artifactory", "username": "${{ secrets.ARTIFACTORY_USERNAME }}", "password": "${{ secrets.ARTIFACTORY_PASSWORD }}" }]'
     
     - name: publish
-      run: mvn deploy -X
+      run: mvn --batch-mode deploy
 
     
